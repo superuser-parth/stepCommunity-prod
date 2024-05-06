@@ -21,7 +21,7 @@ const Applicant = () => {
       const decodedToken = decodeToken(token);
 
       if (decodedToken.userType === 'paid') {
-        const response = await axios.get('http://localhost:4444/api/getApplicants', {
+        const response = await axios.get('https://stepcommunity-prod.onrender.com/api/getApplicants', {
           headers: {
             Authorization: token
           }

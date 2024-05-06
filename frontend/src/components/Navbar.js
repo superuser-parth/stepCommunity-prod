@@ -149,6 +149,17 @@
               </ul>
             </div>
           </li>
+          {showConfirmLogout && (
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-20">
+          <div className="bg-white p-4 rounded-lg text-black z-20">
+            <p>Are you sure you want to logout?</p>
+            <div className="flex justify-center mt-4">
+              <button className="bg-red-500 text-white px-4 py-2 mr-4 rounded-lg" onClick={handleConfirmLogout}>Yes</button>
+              <button className="bg-gray-500 text-white px-4 py-2 rounded-lg" onClick={() => setShowConfirmLogout(false)}>No</button>
+            </div>
+          </div>
+        </div>
+      )}
 
     
         </ul>

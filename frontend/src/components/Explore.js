@@ -19,13 +19,13 @@ const Explore = () => {
 
       let response;
       if (decodedToken.userType === 'paid') {
-        response = await axios.get('http://localhost:4444/api/getJobs', {
+        response = await axios.get('https://stepcommunity-prod.onrender.com/api/getJobs', {
           headers: {
             Authorization: `${token}`
           }
         });
       } else {
-        response = await axios.get('http://localhost:4444/api/getJobsBySkill', {
+        response = await axios.get('https://stepcommunity-prod.onrender.com/api/getJobsBySkill', {
           headers: {
             Authorization: `${token}`
           }

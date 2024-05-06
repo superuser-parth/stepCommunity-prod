@@ -10,7 +10,7 @@ const AdminLogin = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:4444/auth/adminLogin', {
+      const response = await fetch('https://stepcommunity-prod.onrender.com/auth/adminLogin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

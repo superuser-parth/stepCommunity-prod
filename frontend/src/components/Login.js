@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import {storeToken} from '../lib/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import HomeFooter from './HomeFooter';
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:4444/auth/login', {
+      const response = await fetch('https://stepcommunity-prod.onrender.com/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

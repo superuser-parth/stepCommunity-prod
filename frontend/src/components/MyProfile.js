@@ -11,7 +11,7 @@ const MyProfile = () => {
   const fetchJobs = async () => {
     try {
       const token = String(getToken());
-      const response = await axios.get('http://localhost:4444/api/byMe', {
+      const response = await axios.get('https://stepcommunity-prod.onrender.com/api/byMe', {
         headers: {
           Authorization: `${token}`
         }
@@ -35,7 +35,7 @@ const MyProfile = () => {
   const handleDelete = async (jobId) => {
     try {
       const token = getToken();
-      await axios.delete(`http://localhost:4444/api/deletejob/${jobId}`,{
+      await axios.delete(`https://stepcommunity-prod.onrender.com/api/deletejob/${jobId}`,{
         headers:{
           Authorization:token
         }

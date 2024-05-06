@@ -35,7 +35,7 @@ const EditProfile = () => {
   const fetchUserData = async () => {
     try {
       const token = getToken();
-      const response = await axios.get(`http://localhost:4444/api/getUser`, {
+      const response = await axios.get(`https://stepcommunity-prod.onrender.com/api/getUser`, {
         headers: {
           Authorization: token
         }
@@ -95,7 +95,7 @@ const EditProfile = () => {
 
     try {
       const token = getToken();
-      const response = await axios.put(`http://localhost:4444/api/editProfile`, {
+      const response = await axios.put(`https://stepcommunity-prod.onrender.com/api/editProfile`, {
         skills: selectedSkills,
         visible: profileData.showProfile,
         institute: profileData.institute,

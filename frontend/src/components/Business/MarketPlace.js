@@ -13,7 +13,7 @@ const MarketPlace = () => {
     const fetchProducts = async () => {
       const token = getToken();
       try {
-        const response = await fetch('http://localhost:4444/api/getProducts', {
+        const response = await fetch('https://stepcommunity-prod.onrender.com/api/getProducts', {
           headers: {
             Authorization: token
           }

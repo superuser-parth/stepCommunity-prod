@@ -16,7 +16,7 @@ const AdminBrowse = () => {
     // Fetch products from the API
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:4444/admin/getProductsAdmin');
+        const response = await fetch('https://stepcommunity-prod.onrender.com/admin/getProductsAdmin');
         if (response.ok) {
           const data = await response.json();
           setProducts(data);
@@ -36,7 +36,7 @@ const AdminBrowse = () => {
   const handleDeleteProduct = async (productId) => {
     try {
       
-      const response = await axios.delete(`http://localhost:4444/admin/deleteProduct/${productId}`);
+      const response = await axios.delete(`https://stepcommunity-prod.onrender.com/admin/deleteProduct/${productId}`);
       console.log('Product deleted successfully:', response.data);
       window.location.reload(false);
       

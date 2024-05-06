@@ -13,7 +13,7 @@ const JobDetails = () => {
     const fetchJobDetails = async () => {
       const token = getToken()
       try {
-        const response = await axios.get(`http://localhost:4444/api/job-details/${id}`, {
+        const response = await axios.get(`https://stepcommunity-prod.onrender.com/api/job-details/${id}`, {
           headers: {
             Authorization: token
           }

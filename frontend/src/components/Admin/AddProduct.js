@@ -42,7 +42,7 @@ const AddProduct = () => {
     try {
       const token = getToken();
       const response = await axios.post(
-        'http://localhost:4444/admin/addProduct',
+        'https://stepcommunity-prod.onrender.com/admin/addProduct',
         {
           ...formData,
           productImages: formData.productImages.join(','), // Convert image URLs to comma-separated string

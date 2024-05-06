@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getToken } from '../lib/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import HomeFooter from './HomeFooter';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -24,7 +23,6 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <HomeFooter />
     </div>
   );
 };

@@ -15,7 +15,7 @@ const Signup = () => {
 
     try {
       // Make API request to register user
-      const response = await fetch('http://localhost:4444/auth/signup', {
+      const response = await fetch('https://stepcommunity-prod.onrender.com/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

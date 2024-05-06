@@ -23,7 +23,7 @@ const EditJob = () => {
   const fetchJobs = async () => {
     try {
       const token = getToken();
-      const response = await axios.get('http://localhost:4444/api/byMe', {
+      const response = await axios.get('https://stepcommunity-prod.onrender.com/api/byMe', {
         headers: {
           Authorization: token
         }
@@ -69,7 +69,7 @@ const EditJob = () => {
    event.preventDefault()
     try {
       const token = getToken();
-      await axios.put(`http://localhost:4444/api/editJob/${job._id}`,job,{
+      await axios.put(`https://stepcommunity-prod.onrender.com/api/editJob/${job._id}`,job,{
         headers:{
           Authorization:token
         }

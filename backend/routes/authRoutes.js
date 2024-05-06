@@ -51,7 +51,7 @@ router.post('/login', async(req, res) => {
             const passwordMatch = await comparePasswords(password, user.password);
             if (passwordMatch) {
                 const token = jwt.sign({ userId: user._id, userType: user.userType }, authKeys.jwtSecretKey,{
-                    expiresIn:'20s'
+                    expiresIn:'3h'
                 });
                 return res.status(200).json({ message: 'Logged in Successfully', token });
             }

@@ -40,7 +40,7 @@ const CreateJob = () => {
     try {
       const token = getToken();
 
-     const response=await axios.get('http://localhost:4444/api/byMe', {
+     const response=await axios.get('https://stepcommunity-prod.onrender.com/api/byMe', {
         headers: {
           Authorization: token,
         },
@@ -69,7 +69,7 @@ const CreateJob = () => {
     try {
       const token = getToken();
 
-      await axios.post('http://localhost:4444/api/addJob', formData, {
+      await axios.post('https://stepcommunity-prod.onrender.com/api/addJob', formData, {
         headers: {
           Authorization: token,
         },
