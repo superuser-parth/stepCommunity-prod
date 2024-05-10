@@ -3,6 +3,7 @@ import axios from 'axios';
 import { getToken } from '../lib/AuthContext';
 import Navbar from './Navbar';
 import {useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MyProfile = () => {
   const navigate = useNavigate();
@@ -119,4 +120,3 @@ const MyProfile = () => {
 };
 
 export default MyProfile;
-

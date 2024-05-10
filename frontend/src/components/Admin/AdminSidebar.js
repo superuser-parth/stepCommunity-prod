@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import {
   Card,
   Typography,
@@ -64,7 +65,7 @@ useEffect(() => {
             <ShoppingBagIcon className="h-10 w-5" />
           </ListItemPrefix>
           <span className={collapsed ? "hidden" : ""}>
-            <a href="/adminbrowse">E-Commerce</a>
+            <Link to="/adminbrowse">E-Commerce</Link>
           </span>
         </ListItem>
         <ListItem>

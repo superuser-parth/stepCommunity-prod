@@ -1,6 +1,7 @@
 // Signup.js
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   
@@ -39,7 +40,7 @@ const Signup = () => {
 
   return (
     <div>
-        <a href="/" className="text-blue-500 hover:underline">Back</a>  
+        <Link to="/" className="text-blue-500 hover:underline">Back</Link>  
    
     <div className="max-w-md mx-auto mt-8 p-6 bg-white shadow-md rounded-lg">
       
@@ -68,7 +69,7 @@ const Signup = () => {
         </button>
 
         <div className="text-center mt-5">
-      <a href='/login' className="text-blue-500 hover:underline">Already a User? Log in</a>
+      <Link to='/login' className="text-blue-500 hover:underline">Already a User? Log in</Link>
     </div>
       </form>
     </div>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import { decodeToken, getToken } from '../lib/AuthContext';
 import ContentLock from './ContentLock';
+import { Link } from 'react-router-dom';
 
 const Applicant = () => {
   const [applicants, setApplicants] = useState([]);

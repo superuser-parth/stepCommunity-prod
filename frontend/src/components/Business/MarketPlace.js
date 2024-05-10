@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar';
 import { getToken } from '../../lib/AuthContext';
+import { Link } from 'react-router-dom';
 
 const MarketPlace = () => {
   const [products, setProducts] = useState([]);

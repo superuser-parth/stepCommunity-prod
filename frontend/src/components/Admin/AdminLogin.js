@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import {storeToken} from '../../lib/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -41,7 +42,7 @@ const AdminLogin = () => {
   };
 
   return (
-    <div>      <a href="/" className="text-blue-500 hover:underline">Back</a>  
+    <div>      <Link to="/" className="text-blue-500 hover:underline">Back</Link>  
     <div className="max-w-md mx-auto mt-8 p-6 bg-white shadow-md rounded-lg">
       <h2 className="text-2xl mb-4">Admin Login</h2>
       <input

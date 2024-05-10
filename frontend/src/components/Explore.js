@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
 import { decodeToken, getToken } from '../lib/AuthContext';
+import { Link } from 'react-router-dom';
 
 const Explore = () => {
   const [jobs, setJobs] = useState([]);
@@ -56,9 +57,9 @@ const Explore = () => {
       <div className="container mx-auto py-8 px-4 max-w-3xl shadow-md rounded-lg">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold">Explore Jobs</h2>
-          <a href="/createjob" className=" hover:bg-slate-200 text-black font-bold py-2 px-4 rounded focus:outline-none border border-black">
+          <Link to="/createjob" className=" hover:bg-slate-200 text-black font-bold py-2 px-4 rounded focus:outline-none border border-black">
             Create Job
-          </a>
+          </Link>
         </div>
   
         <div className="mb-8">

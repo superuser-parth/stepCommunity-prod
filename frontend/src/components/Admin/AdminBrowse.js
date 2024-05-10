@@ -3,6 +3,7 @@ import AdminNavbar from './AdminNavbar';
 import { useNavigate } from "react-router-dom";
 import AdminSidebar from './AdminSidebar';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 const AdminBrowse = () => {
   const [products, setProducts] = useState([]);
@@ -76,9 +77,9 @@ const AdminBrowse = () => {
         <div className="container mx-auto py-8 px-4 max-w-3xl shadow-md rounded-lg">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">Explore Listings</h2>
-            <a href="/addproduct" className="bg-white hover:bg-slate-300 text-black font-bold py-2 px-4 rounded focus:outline-none border border-black">
+            <Link to="/addproduct" className="bg-white hover:bg-slate-300 text-black font-bold py-2 px-4 rounded focus:outline-none border border-black">
               Add Product
-            </a>
+            </Link>
           </div>
   
           <div className="sticky top-0 bg-gray-100 min-h-32 z-0">

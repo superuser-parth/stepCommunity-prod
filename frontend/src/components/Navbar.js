@@ -1,5 +1,6 @@
   import { removeToken } from '../lib/AuthContext';
   import React, { useState, useEffect } from 'react';
+  import { Link } from 'react-router-dom';
 
   const Navbar = () => {
     const [dropdownsOpen, setDropdownsOpen] = useState({}); // State for dropdown open status
@@ -53,9 +54,9 @@
     return (
       <nav className=" bg-gray-200 p-4 flex justify-between items-center h-20 border-b border-black">
         <div className="flex items-center space-x-4 ml-10">
-          <a href="/dashboard" className="text-black hover:text-gray-600t text-xl font-bold">
+          <Link to="/dashboard" className="text-black hover:text-gray-600t text-xl font-bold">
             stepCommunity.
-          </a>
+          </Link>
         </div>
 
       {/* Mobile Menu Toggle */}
@@ -84,14 +85,14 @@
               </button>
               <ul className={`z-10 absolute w-32 bg-gray-200 mt-1 py-1 rounded-md shadow-lg transition-opacity duration-200 ease-in-out ${dropdownsOpen['dropdown1'] ? 'opacity-100 visible' : 'opacity-0 invisible'} mt-6`}>
                 <li>
-                  <a href="/marketplace" className="block px-4 py-2 text-sm text-black hover:bg-gray-400">
+                  <Link to="/marketplace" className="block px-4 py-2 text-sm text-black hover:bg-gray-400">
                     Marketplace
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/affiliate" className="block px-4 py-2 text-sm text-black hover:bg-gray-400">
+                  <Link to="/affiliate" className="block px-4 py-2 text-sm text-black hover:bg-gray-400">
                     Affiliate Resources
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -111,14 +112,14 @@
               </button>
               <ul className={`z-10 absolute w-32 bg-gray-200 mt-1 py-1 rounded-md shadow-lg transition-all duration-800 ease-in-out overflow-hidden ${dropdownsOpen['dropdown2'] ? 'opacity-100 visible' : 'opacity-0 invisible'} mt-6`}>
                 <li>
-                  <a href="/explore" className="flex justify-center px-4 py-2 text-sm text-black hover:bg-gray-400">
+                  <Link to="/explore" className="flex justify-center px-4 py-2 text-sm text-black hover:bg-gray-400">
                     Jobs
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/applicants" className="flex justify-center px-4 py-2 text-sm text-black hover:bg-gray-400">
+                  <Link to="/applicants" className="flex justify-center px-4 py-2 text-sm text-black hover:bg-gray-400">
                     Applicants
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -137,9 +138,9 @@
               </button>
               <ul className={`z-10 absolute w-32 bg-gray-200 mt-1 py-1 rounded-md shadow-lg transition-all duration-200 ease-in-out overflow-hidden ${dropdownsOpen['dropdown3'] ? 'opacity-100 visible' : 'opacity-0 invisible'} mt-6`}>
                 <li>
-                  <a href="/myprofile" className="flex justify-center px-4 py-2 text-sm text-black hover:bg-gray-400">
+                  <Link to="/myprofile" className="flex justify-center px-4 py-2 text-sm text-black hover:bg-gray-400">
                     My Profile
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <button className="flex w-full justify-center px-4 py-2 text-sm text-black hover:bg-gray-400 border-t border-black mt-4" onClick={()=>setShowConfirmLogout(true)}>
@@ -175,39 +176,39 @@
       </button>
       <ul className="flex flex-col items-center justify-center h-full space-y-4">
         <li>
-          <a href="/dashboard" className="text-black hover:text-gray-600">
+          <Link to="/dashboard" className="text-black hover:text-gray-600">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/marketplace" className="text-black hover:text-gray-600">
+          <Link to="/marketplace" className="text-black hover:text-gray-600">
             Marketplace
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/affiliate" className="text-black hover:text-gray-600">
+          <Link to="/affiliate" className="text-black hover:text-gray-600">
             Affiliate Resources
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/explore" className="text-black hover:text-gray-600">
+          <Link to="/explore" className="text-black hover:text-gray-600">
             Jobs
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/applicants" className="text-black hover:text-gray-600">
+          <Link to="/applicants" className="text-black hover:text-gray-600">
             Applicants
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/myprofile" className="text-black hover:text-gray-600">
+          <Link to="/myprofile" className="text-black hover:text-gray-600">
             Profile
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/login" className="text-black hover:text-gray-600" onClick={handleLogout}>
+          <Link to="/login" className="text-black hover:text-gray-600" onClick={handleLogout}>
             Logout
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
