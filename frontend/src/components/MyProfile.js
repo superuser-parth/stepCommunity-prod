@@ -55,9 +55,9 @@ const MyProfile = () => {
         <div className="flex justify-between">
           <h2 className="text-3xl font-bold mb-4">My Profile</h2>
           
-          <a href="/editprofile" className="bg-white hover:bg-slate-300 text-black font-bold py-4 px-4 rounded focus:outline-none border border-blue-500 mr-4">
+          <Link to="/editprofile" className="bg-white hover:bg-slate-300 text-black font-bold py-4 px-4 rounded focus:outline-none border border-blue-500 mr-4">
             Edit Profile
-          </a>
+          </Link>
         </div>
   
         <h3 className="text-xl font-semibold mb-2">My Jobs</h3>

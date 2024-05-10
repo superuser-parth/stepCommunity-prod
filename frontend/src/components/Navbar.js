@@ -1,17 +1,12 @@
   import { removeToken } from '../lib/AuthContext';
   import React, { useState, useEffect } from 'react';
-  import { Link } from 'react-router-dom';
+  import { Link, useNavigate } from 'react-router-dom';
 
   const Navbar = () => {
     const [dropdownsOpen, setDropdownsOpen] = useState({}); // State for dropdown open status
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu open status
     const[showConfirmLogout, setShowConfirmLogout] = useState(false); //State for confirm logout status
-
-    // Logout function
-    const handleLogout = () => {
-      removeToken();
-      window.location.href = '/login';
-    };
+    const navigate = useNavigate();
 
     // Toggle mobile menu
     const toggleMenu = () => {
@@ -19,8 +14,11 @@
     };
 
     const handleConfirmLogout=()=>{
-      handleLogout();
+      removeToken();
       setShowConfirmLogout(false);
+
+        navigate('/login');
+
     }
 
     // Function to toggle dropdown
@@ -206,7 +204,7 @@
           </Link>
         </li>
         <li>
-          <Link to="/login" className="text-black hover:text-gray-600" onClick={handleLogout}>
+          <Link to="/login" className="text-black hover:text-gray-600" onClick={handleConfirmLogout}>
             Logout
           </Link>
         </li>
